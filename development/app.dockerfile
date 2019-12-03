@@ -29,5 +29,3 @@ RUN  apt-get install -y libmcrypt-dev \
 
 RUN mv .env.example .env
 RUN php artisan key:generate
-
-CMD php artisan migrate:fresh
