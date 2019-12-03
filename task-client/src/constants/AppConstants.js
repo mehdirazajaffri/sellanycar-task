@@ -1,5 +1,5 @@
 export const APIURL =
            process.env.REACT_APP_API_HOST +
                process.env.REACT_APP_API_VERSION_URL ||
-           "http://localhost:8009/api";
+           "http://localhost:8000/api";
 console.log(process.env);
