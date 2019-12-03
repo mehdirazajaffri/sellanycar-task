@@ -1,7 +1,6 @@
 version: "3.1"
 
 services:
-  #  The Application
   app:
     container_name: laravel_app
     build:
@@ -9,13 +8,10 @@ services:
       dockerfile: development/app.dockerfile
     volumes:
       - ./storage:/var/www/storage
-    env_file: ".env"
+    env_file: ".env.example"
     environment:
       - "DB_HOST=database"
-    links:
-      - database
 
-  # The Web Server
   web:
     container_name: nginx_server
     build:
@@ -25,13 +21,12 @@ services:
       - ./storage/logs/:/var/log/nginx
     ports:
       - 8990:80
-    depends_on:
-      - app
 
-  # The Database
   database:
     container_name: database
     image: mysql
+    volumes:
+      - dbdata:/var/lib/mysql
     environment:
       MYSQL_DATABASE: agriculture
       MYSQL_USER: mehdi
