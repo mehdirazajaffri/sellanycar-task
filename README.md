@@ -7,16 +7,19 @@ Test given by sell any car
 #### Things that are covered
 
 -- Rest API for crops, fields, tractors and processes
--- Swagger implementation is also Done. ( php artisan l5-swagger:generate ), every API is not documented
+-- Swagger implementation is also done, every API is not documented
 -- Unit Testing structure only
 -- Front-end to play around
 
 ## Setup
 
-Set your Database connection in .env file
--- go to task-client and RUN npm install then npm start
--- go to task-api, run composer install then Run laravel API using php artisan serve
--- make sure to run backend on 8000
+From the root folder run "sh run.sh"
+
+It will run three containers
+
+-   nginx
+-   laravel
+-   client
 
 ## Test
 
