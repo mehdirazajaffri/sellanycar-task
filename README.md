@@ -26,7 +26,7 @@ It will run three containers
 -   `localhost:8990/api/`
 -   `localhost:3006`
 
--   swagger api documentaion localhost:8990/api/documentation
+-   swagger api documentaion can be seen at http://localhost:8990/api/documentation
 
 ## Features
 
