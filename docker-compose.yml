@@ -1,4 +1,4 @@
-version: "3"
+version: "3.1"
 
 services:
   #  The Application
@@ -49,9 +49,9 @@ services:
     ports:
       - 3006:3000
     environment:
-      NODE_ENV: development
-      REACT_APP_API_HOST: web
-      REACT_APP_API_VERSION_URL: /api
+      - "NODE_ENV=development"
+      - "REACT_APP_API_HOST=web"
+      - "REACT_APP_API_VERSION_URL=/api"
     links:
       - web
 
