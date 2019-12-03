@@ -1,0 +1,86 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "Agriculture API",
+        "description": "Sell Any Car Task",
+        "contact": {
+            "email": "mehdirazajaffri@gmail.com"
+        },
+        "license": {
+            "name": "Apache 2.0",
+            "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
+        },
+        "version": "1.0.0"
+    },
+    "paths": {
+        "/api/crops": {
+            "get": {
+                "tags": [
+                    "Crops"
+                ],
+                "summary": "Get list of crops",
+                "description": "Returns list of crops",
+                "operationId": "getAllCrops",
+                "responses": {
+                    "200": {
+                        "description": "successful operation"
+                    },
+                    "400": {
+                        "description": "Bad request"
+                    }
+                },
+                "security": [
+                    {
+                        "api_key_security_example": []
+                    }
+                ]
+            }
+        },
+        "/api/fields": {
+            "get": {
+                "tags": [
+                    "Fields"
+                ],
+                "summary": "Get list of Fields",
+                "description": "Returns list of Fields",
+                "operationId": "getAllFields",
+                "responses": {
+                    "200": {
+                        "description": "successful operation"
+                    },
+                    "400": {
+                        "description": "Bad request"
+                    }
+                },
+                "security": [
+                    {
+                        "api_key_security_example": []
+                    }
+                ]
+            }
+        },
+        "/api/processes": {
+            "get": {
+                "tags": [
+                    "Processing"
+                ],
+                "summary": "Get list of Processing",
+                "description": "Returns list of processing",
+                "operationId": "getAllProcessedFields",
+                "responses": {
+                    "200": {
+                        "description": "successful operation"
+                    },
+                    "400": {
+                        "description": "Bad request"
+                    }
+                },
+                "security": [
+                    {
+                        "api_key_security_example": []
+                    }
+                ]
+            }
+        }
+    }
+}

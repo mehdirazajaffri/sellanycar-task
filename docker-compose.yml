@@ -1,0 +1,58 @@
+version: "3"
+
+services:
+  #  The Application
+  app:
+    container_name: laravel_app
+    build:
+      context: ./
+      dockerfile: development/app.dockerfile
+    volumes:
+      - ./storage:/var/www/storage
+    env_file: ".env"
+    environment:
+      - "DB_HOST=database"
+    links:
+      - database
+
+  # The Web Server
+  web:
+    container_name: nginx_server
+    build:
+      context: ./
+      dockerfile: development/web.dockerfile
+    volumes:
+      - ./storage/logs/:/var/log/nginx
+    ports:
+      - 8990:80
+    depends_on:
+      - app
+
+  # The Database
+  database:
+    container_name: database
+    image: mysql
+    environment:
+      MYSQL_DATABASE: agriculture
+      MYSQL_USER: mehdi
+      MYSQL_PASSWORD: mehdi
+      MYSQL_ROOT_PASSWORD: MehdiRazaJaffri123
+    ports:
+      - 8991:3306
+    command: --default-authentication-plugin=mysql_native_password
+
+  client:
+    container_name: client
+    build:
+      context: task-client/
+      dockerfile: ../development/client.dockerfile
+    ports:
+      - 3006:3000
+    environment:
+      - NODE_ENV=development
+      - API_URL=web
+    links:
+      - web
+
+volumes:
+  dbdata:
