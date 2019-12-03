@@ -50,7 +50,6 @@ services:
       - 3006:3000
     environment:
       - NODE_ENV=development
-      - API_URL=web
     links:
       - web
 
