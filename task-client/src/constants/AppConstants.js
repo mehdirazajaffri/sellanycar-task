@@ -1,2 +1,2 @@
-export const APIURL = process.env.API_URL || "http://localhost:8009/api";
-console.log(process.env);
+export const APIURL =
+           process.env.REACT_APP_API_URL || "http://localhost:8009/api";
