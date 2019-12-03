@@ -22,10 +22,11 @@ import { Router, Route, Switch, Redirect } from "react-router-dom";
 import AuthLayout from "layouts/Auth.js";
 import RtlLayout from "layouts/RTL.js";
 import AdminLayout from "layouts/Admin.js";
-
+import * as dotenv from "dotenv";
 import "assets/scss/material-dashboard-pro-react.scss?v=1.8.0";
 
 const hist = createBrowserHistory();
+dotenv.config();
 
 ReactDOM.render(
   <Router history={hist}>
