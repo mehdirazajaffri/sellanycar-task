@@ -59,6 +59,29 @@
                 ]
             }
         },
+        "/api/fields-data": {
+            "get": {
+                "tags": [
+                    "Fields"
+                ],
+                "summary": "Get list of Fields",
+                "description": "Returns list of Fields",
+                "operationId": "getAllFieldsWithProcessData",
+                "responses": {
+                    "200": {
+                        "description": "successful operation"
+                    },
+                    "400": {
+                        "description": "Bad request"
+                    }
+                },
+                "security": [
+                    {
+                        "api_key_security_example": []
+                    }
+                ]
+            }
+        },
         "/api/processes": {
             "get": {
                 "tags": [
