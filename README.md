@@ -17,9 +17,10 @@ From the root folder run "sh run.sh"
 
 It will run three containers
 
--   nginx
--   laravel
--   client
+-   nginx_server { Mapped on Port 8990 }
+-   laravel_app
+-   client { Mapped on Port 3006 }
+-   database { Mapped on 8991 }
 
 ## Test
 
@@ -35,3 +36,7 @@ It will run three containers
 -   Fields CRUD
 -   Fields CRUD
 -   View Dashboard
+
+## For any Query
+
+email @ mehdirazajaffri@gmail.com
